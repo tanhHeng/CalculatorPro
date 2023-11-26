@@ -1,0 +1,16 @@
+{
+	"id": "calculator_pro",
+	"version": "0.1.1-beta",
+	"name": "Calculator+",
+	"description": {
+		"en_us": "A calculator plugin, which supports mathematical expressions and functions.",
+		"zh_cn": "一个计算器插件，支持数学表达式和自定义函数"
+	},
+	"author": [
+		"tanh_Heng"
+	],
+	"link": "https://github.com/tanhHeng",
+	"dependencies": {
+		"mcdreforged": ">=2.1.2"
+	}
+}
