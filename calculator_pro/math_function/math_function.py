@@ -40,7 +40,7 @@ e.g. f(h)=1/2*gh^2, \g=9.8'''
 
     def _function_expression_processing(self, func_exp: str):
         func_exp = func_exp.replace(" ","") + ","
-        re_match = re.fullmatch(r"([\w]+)\(([\w,]+)\)=([^\\]+)\\?((?:[\w+]=(?:\-|\+)?\d+(?:\.\d+)?,)+)",func_exp)
+        re_match = re.fullmatch(r"([\w]+)\(([\w,]+)\)=([^\\]+),(?:\\?((?:[\w+]=(?:\-|\+)?\d+(?:\.\d+)?,)+))?",func_exp)
         if not re_match:
             raise MathExpressionError(func_exp)
         name, variables, expression, constants = re_match.groups()
