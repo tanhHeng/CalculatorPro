@@ -44,10 +44,7 @@ e.g. f(h)=1/2*gh^2, \g=9.8'''
         if not re_match:
             raise MathExpressionError(func_exp)
         name, variables, expression, constants = re_match.groups()
-        expression = expression[:-1] # del "," in the end, e.g. "1/2*gh^2," -> "1/2*gh^2"
-        constants = {i:float(k) for i,k in re.findall(r"([\w+])=([.0-9]+)", constants)}
-        if "e" not in constants.keys():
-            constants.update({"e":numpy.e})
+        constants = {i:float(k) for i,k in re.findall(r"([\w+])=([.0-9]+)", constants)} if constants else {}
         
         return name, variables.replace(",",""), constants, expression
 
