@@ -1,6 +1,12 @@
 # CalculatorPro
 MCDR插件，可在游戏内自定义函数并进行计算，支持numpy常用数学函数
 
+**[!] 需要numpy支持**
+
+若启动MCDR时未安装numpy, 则可能需要重启MCDR以应用环境
+
+`pip3 install numpy scipy matplotlib -i https://pypi.tuna.tsinghua.edu.cn/simple`
+
 ---
 
 ## 指令
